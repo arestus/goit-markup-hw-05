@@ -31,9 +31,8 @@ body {
 }
 
 .link-header {
+  fill: currentColor;
   margin-right: 10px;
-  width: 16px;
-  height: 12px;
 }
 img {
   display: block;
@@ -346,6 +345,16 @@ advantages */
   list-style: none;
   display: flex;
   padding-bottom: 24px;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.sociallink-list .item {
+  margin-right: 0;
+}
+
+.sociallink-list .item + .item {
+  margin-left: 10px;
 }
 /* Вид деятельности сотрудников */
 
@@ -668,4 +677,35 @@ advantages */
   color: var(--icon-grey-color);
   border: 1px solid #afb1b8;
   border-radius: 4px;
+}
+
+.future-icon {
+  background-color: #f5f4fa;
+  padding: 25px 100px 25px 100px;
+  border-radius: 4px;
+  display: block;
+  width: 270px;
+  height: 120px;
+}
+
+.img-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+}
+
+.sociallink-icon {
+  fill: #afb1b8;
+}
+
+.sociallink-icon:hover {
+  background-color: #2196f3;
+  fill: #ffffff;
+}
+
+.img-social:hover {
+  background-color: #2196f3;
 }
