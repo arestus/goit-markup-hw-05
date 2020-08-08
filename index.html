@@ -34,11 +34,9 @@
           <ul class="contacts-list list">
             <li class="contacts">
               <a href="mailto:info@devstudio.com" class="contacts link"
-                ><img
-                  src="./images/envelope.svg"
-                  alt="email"
-                  style="margin-right: 10px;"
-                />
+                ><svg class="icon-envelope link-header" width="16" height="12">
+                  <use href="../images/symbol-defs.svg#icon-envelope"></use>
+                </svg>
                 info@devstudio.com
               </a>
             </li>
@@ -58,11 +56,13 @@
     </header>
     <main>
       <section class="hero">
-        <h1 class="hero-title">
-          Эффективные решения<br />
-          для вашего бизнеса
-        </h1>
-        <button class="button" type="button">Заказать услугу</button>
+        <div class="main-hero">
+          <h1 class="hero-title">
+            Эффективные решения<br />
+            для вашего бизнеса
+          </h1>
+          <button class="button" type="button">Заказать услугу</button>
+        </div>
       </section>
       <section class="advantages">
         <div class="container">

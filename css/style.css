@@ -13,6 +13,11 @@
   --primary-white-color: #ffffff;
   --secondary-background-color: #f5f4fa;
 }
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
 
 body {
   background-color: var(--primary-white-color);
@@ -24,10 +29,38 @@ body {
   font-size: 14px;
   line-height: 1.14;
 }
+
+.link-header {
+  margin-right: 10px;
+  width: 16px;
+  height: 12px;
+}
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.main-hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #000000;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/hero-image.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero h1 {
+  padding-top: 200px;
 }
 
 .list {
