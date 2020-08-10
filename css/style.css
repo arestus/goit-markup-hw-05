@@ -13,11 +13,6 @@
   --primary-white-color: #ffffff;
   --secondary-background-color: #f5f4fa;
 }
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
 
 body {
   background-color: var(--primary-white-color);
