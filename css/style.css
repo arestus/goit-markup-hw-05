@@ -161,6 +161,15 @@ img {
   display: flex;
 }
 
+.icon-envelope {
+  width: 16px;
+  height: 12px;
+}
+
+.icon-vector {
+  width: 10px;
+  height: 15px;
+}
 .contacts-list .contacts + .contacts {
   margin-left: 30px;
 }
@@ -180,6 +189,18 @@ img {
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--accent-color);
+}
+
+.contacts a {
+  display: inline-flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
 }
 
 /* Hero */
@@ -340,6 +361,13 @@ advantages */
   flex-wrap: wrap;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.teammates-list > .item {
+  background: #ffffff;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .sociallink-list {
@@ -605,6 +633,9 @@ advantages */
   cursor: pointer;
   color: var(--title-text-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .footer-area {
@@ -664,8 +695,11 @@ advantages */
 
 .client {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border-radius: 4px;
 }
 
 .future-icon {
@@ -693,10 +727,22 @@ advantages */
 .img-social:hover {
   background-color: #2196f3;
 }
+.img-social:focus {
+  background-color: #2196f3;
+}
 
 .img-social:hover .sociallink-icon {
   background-color: #2196f3;
   fill: #ffffff;
+}
+
+.img-social:focus .sociallink-icon {
+  background-color: #2196f3;
+  fill: #ffffff;
+}
+
+.img-client {
+  fill: #afb1b8;
 }
 
 .clients-list .item {
@@ -711,9 +757,18 @@ advantages */
   color: #afb1b8;
 }
 
+.item:hover .img-client {
+  cursor: pointer;
+  fill: #2196f3;
+}
+
 .clients-list .item:hover {
   border: 1px solid #2196f3;
   cursor: pointer;
+}
+
+.client:focus .img-client {
+  fill: #2196f3;
 }
 
 .socialfooter {
@@ -735,8 +790,16 @@ advantages */
   height: 20px;
 }
 
+.socialfooter:focus {
+  background-color: #2196f3;
+}
 .socialfooter:hover {
   background-color: #2196f3;
+}
+
+.socialfooter:focus .socialfooter-icon {
+  background-color: #2196f3;
+  fill: #ffffff;
 }
 
 .socialfooter:hover .socialfooter-icon {
