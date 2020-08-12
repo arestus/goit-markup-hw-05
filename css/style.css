@@ -762,6 +762,10 @@ advantages */
   fill: #2196f3;
 }
 
+.clients-list a:focus {
+  border: 1px solid #2196f3;
+}
+
 .clients-list .item:hover {
   border: 1px solid #2196f3;
   cursor: pointer;
