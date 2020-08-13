@@ -31,6 +31,10 @@ body {
   line-height: 1.14;
 }
 
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
 .link-header {
   fill: currentColor;
   margin-right: 10px;
@@ -134,6 +138,7 @@ img {
 .site-nav .link {
   display: block;
 
+  position: relative;
   font-weight: 500;
   font-size: 15px;
   line-height: 1.2;
@@ -142,6 +147,27 @@ img {
 
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.item .current::after {
+  content: '';
+
+  position: absolute;
+  display: block;
+
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+
+  background: #2196f3;
+  border-radius: 2px;
+}
+
+.link {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
@@ -302,6 +328,27 @@ advantages */
   list-style: none;
   display: flex;
   padding: 0;
+}
+
+.specialization-list .item {
+  position: relative;
+}
+
+.specialization-list h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--primary-white-color);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .specialization-block .item:nth-child(3n) {
@@ -508,9 +555,19 @@ advantages */
 
 .work-list .element {
   width: 370px;
+  height: 404px;
   margin: 15px;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work-list .element:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .work-list .elem {
@@ -521,10 +578,19 @@ advantages */
   margin-right: 0; */
 
 .work-list .item {
+  width: 100%;
+  height: 100%;
+
   font-size: 18px;
   line-height: 1.56;
-  color: var(--primary-white-color);
-  display: none;
+  color: var(--title-text-color);
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 1, 55;
+  text-align: center;
+  justify-content: center;
+
+  letter-spacing: 0.03em;
 }
 
 .picture-name {
@@ -539,6 +605,27 @@ advantages */
 
 .filter-nav {
   text-decoration: none;
+}
+
+.card-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.discription-cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transfrom 2000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-nav:hover .discription-cards {
+  transform: translateY(0);
 }
 
 .text-icon {
@@ -718,10 +805,17 @@ advantages */
   height: 44px;
   width: 44px;
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sociallink-icon {
   fill: #afb1b8;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .img-social:hover {
@@ -783,6 +877,10 @@ advantages */
   width: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialfooter-icon {
@@ -792,6 +890,10 @@ advantages */
   margin-top: 16px;
   width: 20px;
   height: 20px;
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialfooter:focus {
