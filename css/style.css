@@ -336,6 +336,7 @@ advantages */
 
 .specialization-list h3 {
   position: absolute;
+
   bottom: 0;
   left: 0;
   right: 0;
@@ -347,6 +348,7 @@ advantages */
   line-height: 1.14;
   text-transform: uppercase;
   text-align: center;
+
   color: var(--primary-white-color);
   background-color: rgba(47, 48, 58, 0.8);
 }
@@ -519,7 +521,7 @@ advantages */
 
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -555,7 +557,7 @@ advantages */
 
 .work-list .element {
   width: 370px;
-  height: 404px;
+
   margin: 15px;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
@@ -565,7 +567,8 @@ advantages */
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.work-list .element:hover {
+.work-list .element:hover,
+.work-list .element:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -576,22 +579,6 @@ advantages */
 
 /*.work-list > .item:nth-child(3n) {
   margin-right: 0; */
-
-.work-list .item {
-  width: 100%;
-  height: 100%;
-
-  font-size: 18px;
-  line-height: 1.56;
-  color: var(--title-text-color);
-  font-family: Roboto, sans-serif;
-  font-size: 18px;
-  line-height: 1, 55;
-  text-align: center;
-  justify-content: center;
-
-  letter-spacing: 0.03em;
-}
 
 .picture-name {
   color: var(--secondary-text-color);
@@ -614,17 +601,30 @@ advantages */
 
 .discription-cards {
   position: absolute;
+
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  padding: 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
-  transition: transfrom 2000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-nav:hover .discription-cards {
+  transform: translateY(0);
+}
+
+.filter-nav:focus .discription-cards {
   transform: translateY(0);
 }
 
@@ -713,6 +713,10 @@ advantages */
 
   color: var(--secondary-text-color);
   background-color: var(--secondary-background-color);
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-filter:focus,
@@ -837,6 +841,10 @@ advantages */
 
 .img-client {
   fill: #afb1b8;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list .item {
@@ -849,6 +857,10 @@ advantages */
   box-sizing: border-box;
   border-radius: 4px;
   color: #afb1b8;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item:hover .img-client {
@@ -860,7 +872,8 @@ advantages */
   border: 1px solid #2196f3;
 }
 
-.clients-list .item:hover {
+.clients-list .item:hover,
+.clients-list .item:focus {
   border: 1px solid #2196f3;
   cursor: pointer;
 }
