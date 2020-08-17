@@ -855,7 +855,6 @@ advantages */
 
 .img-social:focus .sociallink-icon,
 .img-social:hover .sociallink-icon {
-  background-color: #2196f3;
   fill: #ffffff;
 }
 
@@ -936,7 +935,6 @@ advantages */
 
 .socialfooter:focus .socialfooter-icon,
 .socialfooter:hover .socialfooter-icon {
-  background-color: #2196f3;
   fill: #ffffff;
 }
 
